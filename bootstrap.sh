@@ -12,3 +12,6 @@ helm dependency update .infrastructure/helm-chart/todoapp
 
 # Deploy the todoapp Helm chart (includes mysql sub-chart)
 helm upgrade --install todoapp .infrastructure/helm-chart/todoapp
+
+# Capture cluster resource state
+kubectl get all,cm,secret,ing -A > output.log
