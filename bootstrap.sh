@@ -8,7 +8,7 @@ kubectl taint nodes -l app=mysql app=mysql:NoSchedule --overwrite
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
 
 # Build Helm chart dependencies
-helm dependency update helm-chart/todoapp
+helm dependency update .infrastructure/helm-chart/todoapp
 
 # Deploy the todoapp Helm chart (includes mysql sub-chart)
-helm upgrade --install todoapp helm-chart/todoapp
+helm upgrade --install todoapp .infrastructure/helm-chart/todoapp
