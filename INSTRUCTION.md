@@ -34,6 +34,7 @@ This script:
 2. Installs the ingress-nginx controller
 3. Runs `helm dependency update` to resolve the mysql sub-chart dependency
 4. Installs the `todoapp` Helm release (which includes the `mysql` sub-chart)
+5. Running
 
 ## 4. Verify taints were applied
 
